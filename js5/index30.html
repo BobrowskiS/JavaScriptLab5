@@ -9,11 +9,21 @@
 		var y=prompt('Веддите число y: ');
 		var z=+x;
 		i=2;
-		while (i<=y) {
-			z=z*x;
-			i++;
-		}
-		alert('Число '+x+' в степени ' +y+ ' равно '+z);
+		 if (y>0){
+                         while (i<=y){
+                               z=z*x;
+                               i++;
+                             }
+                        alert('Число ' + x + ' в степени ' + y + ' равно ' + z);
+                 }  else if (y<0){
+                     z=Math.pow(x,y);
+                     alert('Число ' + x + ' в степени ' + y + ' равно ' + z);
+                 } else if (isNaN(x)|| isNaN(y) || x=='\u0020' || y=='\u0020' || x=='' || y=='')
+                  alert('Вы ввели некорректное значение!');
+                  else if (y==0){
+                     z=1;
+                     alert('Число ' + x + ' в степени ' + y + ' равно ' + z);
+                 }
 	</script>
 
 </body>
